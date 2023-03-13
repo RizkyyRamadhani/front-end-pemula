@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event World</title>
+  
+  <style>
+    .contents {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 2px solid black;
+      padding: 15px;
+    }
+    
+    #generateButton {
+      margin-top: 5px;
+      margin-bottom: 15px;;
+    }
+  </style>
+</head>
+<!-- Menambahkan handler inline dalam body dan button -->
+<body onload="welcome()">
+<div class="contents" align="center" hidden>
+  <button id="incrementButton" onclick = "increment()">Tekan Aku :)</button>
+  <h3>Kamu sudah menekan tombol di atas sebanyak <span id="count">0</span></h3>
+</div>
+ 
+<script>
+  // Kode JavaScript kita
+
+  // Menambahkan event handler Onload
+  function welcome() {
+    alert ('Klik tombol Ok maka akan muncul elemen-elemen HTML');
+    const contents = document.querySelector('.contents');
+    contents.removeAttribute('hidden');
+  }
+  function increment () {
+    // kode dibawah untuk menambahkan increment pada id Count
+    document.getElementById('count').innerText++;
+
+    // menambahkan fitur ketika tombol ditekan hingga 7 kali
+    if (document.getElementById('count').innerText == 7) {
+     // membuat elemen h4 dengan text dibawah
+    const hiddenMessage = document.createElement('h4');
+    hiddenMessage.innerText = 'Selamat! Anda menemukan hadiah tersembunyi...';
+    // menambahkan image
+    const image = document.createElement('img');
+    image.setAttribute('src', 'https://i.ibb.co/0V49VRZ/catto.jpg');
+    // menambahkan data dibawah content menggunakan appendchild
+    const contents = document.querySelector('.contents');
+    contents.appendChild(hiddenMessage).appendChild(image);
+  }
+    
+  }   
+
+  // panggil handler onload
+  // document.body.onload = welcome;
+  // panggil handler onclick
+  // document.getElementById('incrementButton').onclick = increment;
+
+</script>
+</body>
+</html>

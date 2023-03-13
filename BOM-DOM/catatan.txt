@@ -1,0 +1,25 @@
+BOM (Browser object model)
+
+Anggota BOM 
+banyak method yang perlu dipelajari dalam BOM tetapi saat ini kita fokus pada 3 method yaitu
+alert(), prompt(), console().
+
+alert()
+untuk menampilkan pesan pop-up browser.
+
+prompt ()
+mengembalikan sebuah nilai sesuai dengan yang di inputkan oleh user.
+
+beberapa method dari object console yang digunakan :
+1. log() = Digunakan untuk menampilkan pesan secara umum ke console
+2. info() = menampilkan pesan yang berisi informasi penting ke console browser.
+3. warn () = menampilkan pesan yang berisi informasi dalam bentuk peringatan ke console browser.
+4. error() = menampilkan pesan yang berisi informasi dalam bentuk error ke console browser.
+
+// Manipulasi HTML dengan InnerTEXT dan Inner HTML
+
+// inner HTML digunakan untuk mengedit tag
+
+// inner text tidak bisa meng edit tag
+
+// Manipulasi style konten dengan style properties
